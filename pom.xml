@@ -30,16 +30,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
-				<username>johnpower12345</username>
-				<environment>Sandbox</environment>
-				<workers>1</workers>
-				<workerType>Micro</workerType>
-				<applicationName>worldtimezone-service</applicationName>
-				<password>John12345</password>
-				<muleVersion>4.4.0</muleVersion>
-				</cloudHubDeployment>
-				</configuration>
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>4.4.0</muleVersion>
+			      <username>johnpower12345</username>
+			      <password>John12345</password>
+			      <applicationName>cicd-test</applicationName>
+			      <environment>Sandbox</environment>
+			      <workerType>Micro</workerType>
+			      <properties>
+			        <key>value</key>
+			      </properties>
+			    </cloudHubDeployment>
+			  </configuration>
 			</plugin>
 		</plugins>
 	</build>

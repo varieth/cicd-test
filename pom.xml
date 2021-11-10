@@ -41,6 +41,7 @@
 			      <properties>
 			        <key>value</key>
 			      </properties>
+			      <objectStoreV2>true</objectStoreV2>
 			    </cloudHubDeployment>
 			  </configuration>
 			</plugin>

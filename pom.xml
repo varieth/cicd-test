@@ -35,7 +35,7 @@
 			      <muleVersion>4.4.0</muleVersion>
 			      <username>johnpower12345</username>
 			      <password>John12345</password>
-			      <applicationName>cicd-test</applicationName>
+			      <applicationName>willthiswork</applicationName>
 			      <environment>Sandbox</environment>
 			      <workerType>Micro</workerType>
 			      <properties>

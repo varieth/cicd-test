@@ -35,7 +35,7 @@
 			      <muleVersion>4.4.0</muleVersion>
 			      <username>johnpower12345</username>
 			      <password>John12345</password>
-			      <applicationName>willthiswork</applicationName>
+			      <applicationName>willthisworkforme</applicationName>
 			      <environment>Sandbox</environment>
 			      <workerType>Micro</workerType>
 			      <properties>

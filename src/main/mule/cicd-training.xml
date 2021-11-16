@@ -5,20 +5,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d7aacad1-c73b-4c47-b21b-f0e511a988c9" basePath="/timezone" >
-		<http:listener-connection host="0.0.0.0" port="${https.port}" />
+		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="7fd3e1df-eec7-4b35-86eb-2530df17b6f0" basePath="/api/timezone" >
 		<http:request-connection host="worldtimeapi.org" />
 	</http:request-config>
+	
+	
+	
+	<configuration-properties doc:name="Configuration properties" doc:id="47502cde-f880-46ef-9bd3-f76a27e0085b" file="${env}.yaml" />
 	<flow name="cicd-trainingFlow" doc:id="b5e90266-6096-408b-bf59-b25abf385600" >
-		<http:listener doc:name="Listener" doc:id="3b37c152-f7af-4927-9974-a0db7b36421e" config-ref="HTTP_Listener_config" path="/{region}/{city}"/>
-		<http:request method="GET" doc:name="Request" doc:id="44cdb686-805a-4dd2-9526-55712ff8eff3" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
-			<http:uri-params ><![CDATA[#[output application/java
----
-{
-	city : attributes.uriParams.city,
-	region : attributes.uriParams.region
-}]]]></http:uri-params>
-		</http:request>
+		<http:listener doc:name="Listener" doc:id="3b37c152-f7af-4927-9974-a0db7b36421e" config-ref="HTTP_Listener_config" path="/{region}/{city}" allowedMethods="GET"/>
+		<set-payload value="${variable}" doc:name="Set Payload" doc:id="9c62f5eb-b95c-4e02-979c-5eee761428a2" />
 	</flow>
 </mule>

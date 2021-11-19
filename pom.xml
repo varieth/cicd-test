@@ -35,8 +35,8 @@
 			      <muleVersion>4.4.0</muleVersion>
 			      <applicationName>${cicd.applicationName}</applicationName>
 			      <environment>${cicd.environment}</environment>
-			      <username>${anypoint.username}</username>
-			      <password>${anypoint.password}</password>
+			      <username>johnpower12345</username>
+			      <password>John12345</password>
 			      <workerType>${cicd.workerType}</workerType>
 			      <properties>
 			        <key>value</key>

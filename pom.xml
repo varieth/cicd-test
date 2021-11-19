@@ -35,12 +35,12 @@
 			      <muleVersion>4.4.0</muleVersion>
 			      <applicationName>${cicd.applicationName}</applicationName>
 			      <environment>${cicd.environment}</environment>
+			      <username>${anypoint.username}</username>
+			      <password>${anypoint.password}</password>
 			      <workerType>${cicd.workerType}</workerType>
 			      <properties>
 			        <key>value</key>
 			        <env>${env}</env>
-			        <username>${jenkins.username}</username>
-			        <password>${jenkins.password}</password>
 			      </properties>
 			      <objectStoreV2>true</objectStoreV2>
 			    </cloudHubDeployment>

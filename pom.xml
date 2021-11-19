@@ -32,11 +32,11 @@
 				<configuration>
 			    <cloudHubDeployment>
 			      <uri>${cicd.uri}</uri>
-			      <muleVersion>4.4.0</muleVersion>
+			      <muleVersion>${cicd.muleVersion}</muleVersion>
+			      <username>${cicd.username}</username>
+			      <password>${cicd.password}</password>
 			      <applicationName>${cicd.applicationName}</applicationName>
 			      <environment>${cicd.environment}</environment>
-			      <username>johnpower12345</username>
-			      <password>John12345</password>
 			      <workerType>${cicd.workerType}</workerType>
 			      <properties>
 			        <key>value</key>

@@ -1,1 +1,10 @@
 variable: "this is a production variable. super important"
+
+cicd:
+  uri: "https://anypoint.mulesoft.com"
+  muleVersion: "4.4.0"
+  username: "johnpower12345"
+  password: "John12345"
+  applicationName: "willthisworkforme"
+  environment: "Sandbox"
+  workerType: "Micro"

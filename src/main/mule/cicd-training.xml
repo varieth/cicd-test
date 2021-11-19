@@ -15,9 +15,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	
 	<configuration-properties doc:name="Configuration properties" doc:id="47502cde-f880-46ef-9bd3-f76a27e0085b" file="${env}.yaml" />
 	<global-property doc:name="Global Property" doc:id="a3399913-44c9-4508-afdd-e40bdc8233a9" name="env" value="dev" />
-	<global-property doc:name="Global Property" doc:id="a6559b80-cff0-42b5-adc9-0cb46ba6fee5" name="Denv" value="dev" />
-	<global-property doc:name="Global Property" doc:id="e1ec7e2c-9e2e-44fe-afd9-703af1b8e80b" name="jenkins.username" value="nil" />
-	<global-property doc:name="Global Property" doc:id="c63c9fff-8acc-489a-8675-5a316f4af759" name="jenkins.password" value="nil" />
 	<flow name="cicd-trainingFlow" doc:id="b5e90266-6096-408b-bf59-b25abf385600" >
 		<http:listener doc:name="Listener" doc:id="3b37c152-f7af-4927-9974-a0db7b36421e" config-ref="HTTP_Listener_config" path="/{region}/{city}" allowedMethods="GET"/>
 		<set-payload value="${variable}" doc:name="Set Payload" doc:id="9c62f5eb-b95c-4e02-979c-5eee761428a2" />

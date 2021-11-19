@@ -31,13 +31,13 @@
 				<extensions>true</extensions>
 				<configuration>
 			    <cloudHubDeployment>
-			      <uri>${cicd.uri}</uri>
+			      <uri>https://anypoint.mulesoft.com</uri>
 			      <muleVersion>4.4.0</muleVersion>
 			      <username>johnpower12345</username>
 			      <password>John12345</password>
-			      <applicationName>${cicd.applicationName}</applicationName>
-			      <environment>${cicd.environment}</environment>
-			      <workerType>${cicd.workerType}</workerType>
+			      <applicationName>willthisworkforme</applicationName>
+			      <environment>Sandbox</environment>
+			      <workerType>Micro</workerType>
 			      <properties>
 			        <key>value</key>
 			        <env>${env}</env>

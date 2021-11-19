@@ -32,7 +32,7 @@
 				<configuration>
 			    <cloudHubDeployment>
 			      <uri>${cicd.uri}</uri>
-			      <muleVersion>${cicd.muleVersion}</muleVersion>
+			      <muleVersion>4.4.0</muleVersion>
 			      <username>${cicd.username}</username>
 			      <password>${cicd.password}</password>
 			      <applicationName>${cicd.applicationName}</applicationName>

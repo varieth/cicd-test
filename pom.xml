@@ -39,8 +39,8 @@
 			      <properties>
 			        <key>value</key>
 			        <env>${env}</env>
-			        <username>${jenkins.username}</username>
-			        <password>${jenkins.password}</password>
+			        <username>${username}</username>
+			        <password>${password}</password>
 			      </properties>
 			      <objectStoreV2>true</objectStoreV2>
 			    </cloudHubDeployment>

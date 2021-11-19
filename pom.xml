@@ -33,14 +33,14 @@
 			    <cloudHubDeployment>
 			      <uri>${cicd.uri}</uri>
 			      <muleVersion>4.4.0</muleVersion>
-			      <username>${jenkins.username}</username>
-			      <password>${jenkins.password}</password>
 			      <applicationName>${cicd.applicationName}</applicationName>
 			      <environment>${cicd.environment}</environment>
 			      <workerType>${cicd.workerType}</workerType>
 			      <properties>
 			        <key>value</key>
 			        <env>${env}</env>
+			        <username>${jenkins.username}</username>
+			        <password>${jenkins.password}</password>
 			      </properties>
 			      <objectStoreV2>true</objectStoreV2>
 			    </cloudHubDeployment>

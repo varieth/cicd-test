@@ -2,7 +2,7 @@ pipeline {
 
     agent any 
     
-    enviornment {
+    environment {
     
     USERNAME='%APUSER%'
     PASSWORD='%AP_PASS%'

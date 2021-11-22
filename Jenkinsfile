@@ -2,14 +2,6 @@ pipeline {
 
     agent any 
     
-    environment {
-    
-    USERNAME='%APUSER%'
-    PASSWORD='%AP_PASS%'
-    TESTVARIABLE='%TESTVAR%'
-    ENVIRONMENT='%ENV%'
-    
-    }
     stages {
         stage('Build') { 
             steps {
@@ -18,7 +10,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                bat 'mvn package deploy -DmuleDeploy -e -X -Denv=%ENVIRONMENT% -Danypoint.username=%USERNAME% -Danypoint.password=%PASSWORD% -Dtest.var=%TESTVARIABLE%'
+                bat 'mvn package deploy -DmuleDeploy -e -X -Denv=%ENV% -Danypoint.username=%APUSER% -Danypoint.password=%AP_PASS% -Dtest.var=%TESTVAR%'
             }
         }
     }

@@ -6,4 +6,6 @@ cicd:
   applicationName: "willthisworkforme"
   environment: "Sandbox"
   workerType: "Micro"
+  testVar: ${test.var}
+  
   

@@ -1,10 +1,10 @@
 pipeline {
     agent any 
     enviornment{
-    USERNAME=%APUSER%
-    PASSWORD=%AP_PASS%
-    TESTVARIABLE=%TESTVAR%
-    ENVIRONMENT=%ENV%
+    USERNAME='%APUSER%'
+    PASSWORD='%AP_PASS%'
+    TESTVARIABLE='%TESTVAR%'
+    ENVIRONMENT='%ENV%'
     
     }
     stages {

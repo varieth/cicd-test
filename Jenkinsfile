@@ -1,6 +1,9 @@
 pipeline {
+
     agent any 
-    enviornment{
+    
+    enviornment {
+    
     USERNAME='%APUSER%'
     PASSWORD='%AP_PASS%'
     TESTVARIABLE='%TESTVAR%'

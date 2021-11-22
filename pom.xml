@@ -39,7 +39,7 @@
 			      <environment>Sandbox</environment>
 			      <workerType>Micro</workerType>
 			      <properties>
-			        <key>${test.var}</key>
+			        <testVar>${test.var}</testVar>
 			        <env>${env}</env>
 			      </properties>
 			      <objectStoreV2>true</objectStoreV2>

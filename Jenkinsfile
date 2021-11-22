@@ -10,7 +10,8 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                bat 'mvn package deploy -DmuleDeploy -e -X -Denv="%ENV%" -Danypoint.username="%APUSER%" -Danypoint.password="%AP_PASS%" -Dtest.var="%TESTVAR%"'
+            	echo "Testing build %ENV% "
+                bat 'mvn package deploy -DmuleDeploy -e -X -Denv="${ENV}" -Danypoint.username="${APUSER}" -Danypoint.password="${AP_PASS}" -Dtest.var="${TESTVAR}"'
             }
         }
     }

@@ -20,6 +20,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<global-property doc:name="Global Property" doc:id="9b853591-f724-499a-8c24-a065fd4202dc" name="testVar" value="asd" />
 	<flow name="cicd-trainingFlow" doc:id="b5e90266-6096-408b-bf59-b25abf385600" >
 		<http:listener doc:name="Listener" doc:id="3b37c152-f7af-4927-9974-a0db7b36421e" config-ref="HTTP_Listener_config" path="/{region}/{city}" allowedMethods="GET"/>
-		<set-payload value="${variable} and test var: ${testVar}" doc:name="Set Payload" doc:id="9c62f5eb-b95c-4e02-979c-5eee761428a2" />
+		<set-payload value="${variable} and test var: ${testVariable}" doc:name="Set Payload" doc:id="9c62f5eb-b95c-4e02-979c-5eee761428a2" />
 	</flow>
 </mule>

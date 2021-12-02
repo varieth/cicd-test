@@ -6,6 +6,7 @@ pipeline {
         stage('Build') { 
             steps {
                echo 'Hello World'
+               sh 'mvn -e -X clean install'
             }
         }
     }

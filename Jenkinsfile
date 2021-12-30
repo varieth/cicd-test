@@ -1,4 +1,4 @@
-define APP_NAME_tmp;
+define NAME;
 define DEPLOYMENT_ENV_tmp;
 define CONFIG_TYPE_tmp;
 pipeline 
@@ -17,13 +17,13 @@ pipeline
         			{
         				case 'dev':
         					echo 'Deploying to dev env'
-        					APP_NAME_tmp="Johns App"
+        					NAME="Johns App"
         					DEPLOYMENT_ENV_tmp="Sandbox"
         					CONFIG_TYPE_tmp="dev"
         					break
         				case 'prod':
         					echo 'Deploying to production env'
-        					APP_NAME_tmp="Johns App"
+        					NAME="Johns App"
         					DEPLOYMENT_ENV_tmp="Sandbox"
         					CONFIG_TYPE_tmp="prod"
         					break
@@ -43,7 +43,7 @@ pipeline
         {
         	environment
         	{
-        		APP_NAME="${APP_NAME_tmp}"
+        		APP_NAME="${NAME}"
         		DEPLOYMENT_ENV="${DEPLOYMENT_ENV_tmp}"
         		CONFIG_TYPE="${CONFIG_TYPE_tmp}"
         	}
@@ -61,9 +61,6 @@ pipeline
         					break
         				case 'prod':
         					echo 'Deploying to production env'
-        					APP_NAME="Johns App"
-        					DEPLOYMENT_ENV="Sandbox"
-        					CONFIG_TYPE="prod"
         					withCredentials([usernamePassword(credentialsId: 'johnpowerlogin', passwordVariable: 'PLATFORM_PASSWORD', usernameVariable: 'PLATFORM_USERNAME')]) {
 							    bat 'mvn -X -e deploy -Dmuledeploy'
 							}

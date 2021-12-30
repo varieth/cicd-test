@@ -56,13 +56,13 @@ pipeline
         				case 'dev':
         					echo 'Deploying to dev env'
         					withCredentials([usernamePassword(credentialsId: 'johnpowerlogin', passwordVariable: 'PLATFORM_PASSWORD', usernameVariable: 'PLATFORM_USERNAME')]) {
-							    bat 'mvn -X -e deploy -Dmuledeploy'
+							    bat 'mvn -X -e deploy -DmuleDeploy'
 							}
         					break
         				case 'prod':
         					echo 'Deploying to production env'
         					withCredentials([usernamePassword(credentialsId: 'johnpowerlogin', passwordVariable: 'PLATFORM_PASSWORD', usernameVariable: 'PLATFORM_USERNAME')]) {
-							    bat 'mvn -X -e deploy -Dmuledeploy'
+							    bat 'mvn -X -e deploy -DmuleDeploy'
 							}
         					break
         			}

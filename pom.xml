@@ -12,7 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.4.0</app.runtime>
+		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 	</properties>
 
@@ -33,14 +33,13 @@
 			    <cloudHubDeployment>
 			      <uri>https://anypoint.mulesoft.com</uri>
 			      <muleVersion>4.4.0</muleVersion>
-			      <username>${anypoint.username}</username>
-			      <password>${anypoint.password}</password>
-			      <applicationName>willthisworkforme</applicationName>
-			      <environment>Sandbox</environment>
+			      <username>${env.PLATFORM_USERNAME}</username>
+			      <password>${env.PLATFORM_USERNAME}</password>
+			      <applicationName>${env.APP_NAME}</applicationName>
+			      <environment>${env.DEPLOYMENT_ENV}</environment>
 			      <workerType>Micro</workerType>
 			      <properties>
-			        <testVar>${test.var}</testVar>
-			        <env>${env}</env>
+			        <env>${env.CONFIG_TYPE}</env>
 			      </properties>
 			      <objectStoreV2>true</objectStoreV2>
 			    </cloudHubDeployment>

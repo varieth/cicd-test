@@ -1,9 +1,1 @@
-variable: "everyone will hate you if you use this in production"
-
-cicd:
-  uri: "https://anypoint.mulesoft.com"
-  muleVersion: "4.4.0"
-  applicationName: "willthisworkforme"
-  environment: "Sandbox"
-  workerType: "Micro"
-  testVariable: ${testVar}
+variable: "Some important dev-test related data"

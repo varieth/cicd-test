@@ -1,9 +1,36 @@
+def NAME;
+def DEPLOYMENT_ENV_tmp;
+def CONFIG_TYPE_tmp;
 pipeline 
 {
     agent any 
     
     stages 
     {
+    	stage('Pre-setup')
+        {
+        	steps
+        	{
+        		script
+        		{
+        			switch(params.ENV)
+        			{
+        				case 'dev':
+        					echo 'Deploying to dev env'
+        					//NAME="Johns App"
+        					DEPLOYMENT_ENV_tmp="Sandbox"
+        					CONFIG_TYPE_tmp="dev"
+        					break
+        				case 'prod':
+        					echo 'Deploying to production env'
+        					//NAME="Johns App"
+        					DEPLOYMENT_ENV_tmp="Sandbox"
+        					CONFIG_TYPE_tmp="prod"
+        					break
+        			}
+        		}
+        	}
+        }
         stage('Build') 
         { 
             steps 
@@ -16,9 +43,9 @@ pipeline
         {
         	environment
         	{
-        		APP_NAME="app"
-        		DEPLOYMENT_ENV="Sandbox"
-        		CONFIG_TYPE="dev"
+        		APP_NAME="${NAME}"
+        		DEPLOYMENT_ENV="${DEPLOYMENT_ENV_tmp}"
+        		CONFIG_TYPE="${CONFIG_TYPE_tmp}"
         	}
         	steps
         	{

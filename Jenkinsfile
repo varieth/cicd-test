@@ -1,4 +1,4 @@
-define APP_tmp
+define APP_NAME_tmp
 define DEPLOYMENT_ENV_tmp
 define CONFIG_TYPE_tmp
 pipeline 

@@ -34,7 +34,7 @@
 			      <uri>https://anypoint.mulesoft.com</uri>
 			      <muleVersion>4.4.0</muleVersion>
 			      <username>${env.PLATFORM_USERNAME}</username>
-			      <password>${env.PLATFORM_USERNAME}</password>
+			      <password>${env.PLATFORM_PASSWORD}</password>
 			      <applicationName>${env.APP_NAME}</applicationName>
 			      <environment>${env.DEPLOYMENT_ENV}</environment>
 			      <workerType>Micro</workerType>

@@ -17,13 +17,13 @@ pipeline
         			{
         				case 'dev':
         					echo 'Deploying to dev env'
-        					NAME="Johns App"
+        					NAME="Johns-App"
         					DEPLOYMENT_ENV_tmp="Sandbox"
         					CONFIG_TYPE_tmp="dev"
         					break
         				case 'prod':
         					echo 'Deploying to production env'
-        					NAME="Johns App"
+        					NAME="Johns-App"
         					DEPLOYMENT_ENV_tmp="Sandbox"
         					CONFIG_TYPE_tmp="prod"
         					break
